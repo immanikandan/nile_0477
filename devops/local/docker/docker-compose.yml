@@ -69,9 +69,19 @@ services:
       - camundaservice
       - authproxy
       - securitymanager
+      - dan
 
 
 
+  dan: 
+    build: ../../../application/services/custom_services/dan
+    image: dan-0477
+    container_name: dan-0477
+    ports: 
+      - 8007:8007
+    env_file: .env
+    depends_on:
+      - mongo
 
 
 volumes:

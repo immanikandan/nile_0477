@@ -54,6 +54,11 @@ service:
     type: NodePort
     port: 8080
     targetPort: 8080
+  dan: 
+    name: dan
+    type: NodePort
+    port: 8007
+    targetPort: 8007
 
 
 deployment:
@@ -80,6 +85,9 @@ deployment:
   desktop:
      name: desktop
      image: geppettotest/nile-desktop:1.0
+  dan: 
+    name: dan
+    image: geppettotest/nile-dan:1.0
 
   camundapod:
      name: camundapod
